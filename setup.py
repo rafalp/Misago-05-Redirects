@@ -11,9 +11,9 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 
 setup(
-    name='Example',
+    name='misago-05-redirects',
     version=version,
-    license='Misago 0.5 Redirects',
+    license='GNU General Public License v2 (GPLv2)',
     description=(
         "This Misago app provides redirects for forums that were "
         "migrated from Misago 0.5 to Misago 0.6 and onwards."
@@ -21,7 +21,6 @@ setup(
     url='http://www.misago-project.org/',
     author=u'Rafał Pitoń',
     author_email='kontakt@rpiton.com',
-    install_requires=REQUIREMENTS,
     packages=find_packages(),
     include_package_data=True,
     # ref: https://pypi.python.org/pypi?%3Aaction=list_classifiers
