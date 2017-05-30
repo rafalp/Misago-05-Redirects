@@ -3,39 +3,30 @@ import os
 
 from setuptools import setup, find_packages
 
-from example import __version__ as version
-
-
-SETUP_DIR = os.path.dirname(__file__)
-
-
-with open(os.path.join(SETUP_DIR, 'requirements.txt'), "r") as f:
-    REQUIREMENTS = [x.strip() for x in f.readlines()]
+from misago05redirects import __version__ as version
 
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 
-EXCLUDE_FROM_PACKAGES = []
-
-
 setup(
     name='Example',
     version=version,
-    license='GNU General Public License v2 (GPLv2)',
+    license='Misago 0.5 Redirects',
     description=(
-        "This is example package."
+        "This Misago app provides redirects for forums that were "
+        "migrated from Misago 0.5 to Misago 0.6 and onwards."
     ),
     url='http://www.misago-project.org/',
     author=u'Rafał Pitoń',
     author_email='kontakt@rpiton.com',
     install_requires=REQUIREMENTS,
-    packages=find_packages(exclude=EXCLUDE_FROM_PACKAGES),
+    packages=find_packages(),
     include_package_data=True,
     # ref: https://pypi.python.org/pypi?%3Aaction=list_classifiers
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
         'Framework :: Django',
         'Intended Audience :: Developers',
